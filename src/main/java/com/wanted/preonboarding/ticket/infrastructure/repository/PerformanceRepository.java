@@ -9,4 +9,5 @@ import java.util.UUID;
 public interface PerformanceRepository extends JpaRepository<Performance, UUID> {
     List<Performance> findByIsReserve(String isReserve);
     Performance findByName(String name);
+    Performance findFirstByIsReserveAndName(String isReserve, String name);
 }

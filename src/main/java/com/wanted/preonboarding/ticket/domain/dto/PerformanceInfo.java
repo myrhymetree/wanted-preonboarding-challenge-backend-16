@@ -12,10 +12,10 @@ import java.util.UUID;
 @Builder
 public class PerformanceInfo {
     private UUID performanceId;
-    private String performanceName;
-    private String performanceType;
-    private Date startDate;
-    private String isReserve;
+    private String performanceName;     // 공연명
+    private String performanceType;     // 공연 종류
+    private Date startDate;             // 공연 시작일
+    private String isReserve;           // 예약 여부
 
     public static PerformanceInfo of(Performance entity) {
         return PerformanceInfo.builder()
